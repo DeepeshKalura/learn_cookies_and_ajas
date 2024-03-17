@@ -1,0 +1,11 @@
+{
+  "name": "learn-ejs-cookies",
+  "version": "1.0.0",
+  "description": "\"Going to learn for the task and enjoy the logic\"",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
