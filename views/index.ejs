@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning EJS</title>
+</head>
+
+<body>
+    <h1>Hello, <span id="namePlaceholder">
+            <%= name %>
+        </span>!</h1>
+    <button id="clickMeButton">Click Me</button>
+    <!-- <h1>Hello, <%= name %>!</h1> -->
+    <script>
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const button = document.getElementById('clickMeButton');
+            button.addEventListener('click', function () {
+                const newName = prompt('Enter a new name:');
+                if (newName != undefined) {
+                    const nameCookie = `name=${encodeURIComponent(newName)}`;
+                    document.cookie = `${nameCookie};`
+                    namePlaceholder.textContent = newName;
+                } else {
+                    alert("You Forgot to add your name");
+                }
+            });
+
+        });
+
+    </script>
+</body>
+
+</html>
